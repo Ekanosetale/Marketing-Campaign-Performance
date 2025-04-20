@@ -1,0 +1,163 @@
+
+-- Q1 ●	Which campaign generated the highest number of impressions, clicks, and conversions?
+
+SELECT 
+	Campaign,
+	SUM(Impressions) AS Total_Impressions,
+	SUM(Clicks) AS Total_Clicks,
+	SUM(Conversions) AS Total_Coversion,
+	ROUND(SUM(Impressions + Clicks + Conversions),0) AS Final_Result
+FROM [Marketing Data]
+GROUP BY Campaign;
+
+SELECT 
+	Campaign,
+	ROUND(SUM(Impressions + Clicks + Conversions),0) AS Final_Result
+FROM [Marketing Data]
+GROUP BY Campaign;
+
+-- Q2 ●	What is the average cost-per-click (CPC)  and click-through rate (CTR) for each campaign?
+SELECT 
+    Campaign,
+    AVG(TRY_CAST(Daily_Average_CPC AS FLOAT)) AS AVG_CPC,
+    AVG(TRY_CAST(REPLACE(CTR, '%', '') AS FLOAT)) AS AVG_CTR
+FROM [Marketing Data]
+GROUP BY Campaign;
+
+-- 3 ●	Which channel has the highest ROI?
+SELECT 
+	Channel,
+	ROUND (SUM(Total_conversion_value_GBP),0) AS Total_Conversion_Value,
+	SUM(Spend_GBP) AS Total_Spend,
+	ROUND((SUM(Total_conversion_value_GBP) - SUM(Spend_GBP)) / SUM(Spend_GBP) * 100, 0) AS ROI
+FROM [Marketing Data]
+GROUP BY Channel;
+
+SELECT
+	Channel,
+	ROUND((SUM(Total_conversion_value_GBP) - SUM(Spend_GBP)) / SUM(Spend_GBP) * 100, 0) AS ROI
+FROM [Marketing Data]
+GROUP BY Channel;
+
+-- 4 ●	How do impressions, clicks, and conversions vary across different  channels?
+
+SELECT
+	Channel,
+	ROUND (SUM(Impressions),0)  AS Total_Impression,
+	SUM(Clicks) AS Total_Clicks,
+	SUM(Conversions) AS Total_Conversion
+FROM [Marketing Data]
+GROUP BY Channel;
+
+-- 5 ●	Which cities have the highest engagement rates (likes, shares, comments)?
+SELECT
+	City_Location,
+	ROUND(SUM(Likes_Reactions + Shares + Comments + Clicks) / SUM(Impressions),3) * 100 AS Engagement_Rate  
+FROM [Marketing Data]
+GROUP BY City_Location;
+
+-- 6 ●	What is the conversion rate by city?
+SELECT 
+	City_Location,
+	SUM(Conversions) AS Total_Conversions, 
+	SUM(Clicks) AS Total_Clicks,
+	ROUND(CAST(SUM(Conversions) AS FLOAT) / (SUM(Clicks)), 2) * 100 AS Conversion_Rate
+FROM [Marketing Data]
+GROUP BY City_Location;
+
+SELECT
+	City_Location,
+	ROUND(CAST(SUM(Conversions) AS FLOAT) / (SUM(Clicks)), 2) * 100 AS Conversion_Rate
+FROM [Marketing Data]
+GROUP BY City_Location;
+	 
+-- 7 ●	How do ad performances compare across different devices (mobile, desktop, tablet)?
+SELECT 
+	Ad,
+    Device,
+    ROUND(SUM(Impressions),0) AS Total_Impressions,
+    SUM(Conversions) AS Total_Conversions,
+	SUM(Likes_Reactions) + SUM(Shares) + SUM(Comments) + SUM(Clicks) AS Total_Engagement,
+	ROUND(SUM(Likes_Reactions + Shares + Comments + Clicks) / SUM(Impressions),3) * 100 AS Engagement_Rate 
+FROM [Marketing Data]
+GROUP BY Device,Ad;
+
+-- 8 ●	Which device type generates the highest conversion rates?
+SELECT 
+	Device,
+	SUM(Conversions) AS Total_Conversion,
+	ROUND(SUM(Clicks),0) AS Total_Clicks,
+	ROUND(CAST(SUM(Conversions)AS FLOAT) / SUM(Clicks),2) * 100 AS Conversion_Rate
+FROM [Marketing Data]
+GROUP BY Device;
+
+SELECT 
+	Device,
+	ROUND(CAST(SUM(Conversions)AS FLOAT) / SUM(Clicks),2) * 100 AS Conversion_Rate
+FROM [Marketing Data]
+GROUP BY Device;
+	
+
+-- 9 ●	Which specific ads are performing best in terms of engagement and conversions?
+SELECT
+	Ad,
+	SUM(Conversions) AS Total_Conversion,
+	ROUND (CAST(SUM(Conversions)AS FLOAT) / SUM(Clicks),2) * 100 AS Conversion_Rate,
+	SUM(Likes_Reactions) + SUM(Shares) + SUM(Comments) + SUM(Clicks) AS Total_Engagement,
+	ROUND((SUM(Likes_Reactions) + SUM(Shares) + SUM(Comments) + SUM(Clicks) )
+	* 100.0 / SUM(Impressions),0) AS Engagement_Rate
+	FROM [Marketing Data]
+	GROUP BY Ad;
+
+--  10 ●	What are the common characteristics of high-performing ads?
+
+-- 11 ●	What is the ROI for each campaign, and how does it compare across different channels and devices?
+SELECT 
+	   Campaign,
+	   Channel,
+	   Device,
+	   SUM(Spend_GBP) AS Total_Spend,
+	   ROUND(SUM(Total_conversion_value_GBP),0) AS Total_Revenue,
+	  ROUND((SUM(Total_conversion_value_GBP) - SUM(Spend_GBP)) / SUM(Spend_GBP) * 100, 0) AS ROI
+FROM [Marketing Data]
+GROUP BY Campaign, Channel, Device;
+
+SELECT 
+	   Campaign,
+	   Channel,
+	   Device,
+	   ROUND((SUM(Total_conversion_value_GBP) - SUM(Spend_GBP)) / SUM(Spend_GBP) * 100, 0) AS ROI
+FROM [Marketing Data]
+GROUP BY Campaign,Channel,Device
+;
+SELECT 
+	Campaign,
+	ROUND((SUM(Total_conversion_value_GBP) - SUM(Spend_GBP)) / SUM(Spend_GBP) * 100, 0) AS ROI
+FROM [Marketing Data]
+GROUP BY Campaign;
+
+-- 12 ●	How does spend correlate with conversion value across different campaigns?
+SELECT 
+	Campaign,
+	SUM(Spend_GBP) AS Total_Spend,
+	SUM(Conversions) AS Total_Conversion
+FROM [Marketing Data]
+GROUP BY Campaign;
+
+-- 13 ●	Are there any noticeable trends or seasonal effects in ad performance over time? 
+SELECT 
+	FORMAT(CAST(Date AS DATE), 'MMMM') AS M_Month,
+	ROUND(SUM(Impressions),0) AS Total_Impressions,
+	SUM(Clicks) AS Total_Clicks,
+	SUM(Conversions) AS Total_Conversions,
+	SUM(Spend_GBP) AS Total_Spend,
+	SUM(Clicks) / (SUM(Impressions))* 100 AS Click_Through_Rate,
+	ROUND(CAST(SUM(Conversions) AS FLOAT) / (SUM(Clicks)), 2) * 100 AS Conversion_Rate,
+	ROUND(SUM(Likes_Reactions + Shares + Comments + Clicks) / SUM(Impressions),3) * 100 AS Engagement_Rate  
+FROM [Marketing Data]
+GROUP BY FORMAT(CAST(Date AS DATE), 'MMMM');
+
+
+
+	
+
