@@ -79,5 +79,59 @@ The dataset contains the following columns:
 7.	Time Series Analysis:
 ●	Are there any noticeable trends or seasonal effects in ad performance over time?
 
-![](TS1.1.jpg)
+## Analysis And Discussion Of Finfings
 
+![](1.jpg)
+![](2.jpg)
+
+### 1. Campaign Performance
+Impressions: Fall Campaign had the highest reach with 6.43M impressions, followed by Spring (4.75M) and Summer (3.46M). **Conversions:** All three campaigns had similar conversion volumes (~13K–15K), showing competitive performance in driving actions. **Clicks:** Fall again led in clicks, aligning with its broader reach. **CTR & CPC:** Fall had the highest CTR (59.08%), while Summer had a slightly better CPC efficiency.
+
+### 2. Channel Effectiveness
+**ROI:** Pinterest emerged as the strongest channel with an ROI up to 2,382.26, especially dominating on desktop across campaigns. Instagram followed, while Facebook consistently lagged behind in ROI. **Conversions:** Instagram led in total conversions (15.6K), followed by Facebook (13.1K) and Pinterest (11.5K).
+
+### 3. Geographical Insights
+***Top Performing Cities by Engagement Rate:** Birmingham (7.1%), Manchester (6.8%), and London (6.3%). **Conversion Rate by City:** Birmingham again topped with 29%, ahead of Manchester (23%) and London (18%).
+
+### 4. Device Performance
+**Highest Conversions:** Discount Ads on Desktop had the best conversion rate (30.59%) and engagement rate (9.54%). Mobile also performed well for discount ads but lagged behind desktop.**Collection Ads:** Showed moderate results, with desktop again outperforming mobile.
+
+### 5. Ad-Level Analysis
+Discount Ads significantly outperformed Collection Ads across all devices—both in conversion and engagement. High-performing ads shared characteristics like: High clarity on offers (discounts) Better optimization on desktop platforms. Engaging formats that drive interaction
+
+### 6. ROI Analysis Across Segments
+Best ROI consistently observed on Pinterest Desktop, especially for the Spring campaign. Summer + Pinterest + Desktop combo gave the highest ROI (2,156.02–2,382.26) across the board. Facebook had the lowest ROI across all combinations of campaigns and devices.
+
+### 7. Time Series & Seasonal Trends
+**Best Performing Months:** September to November showed the highest revenues and conversions. June, July, August saw peak conversion rates (34.36% in June), likely due to seasonal promotional pushes. Engagement rates peaked in June (9.55%) and July (9.10%)—showing strong summer interest.
+
+## 💡 Recommendations
+Double Down on Pinterest Ads—Especially Desktop:
+ROI is significantly higher on Pinterest, particularly on desktop. Reallocate more spend here to maximize returns.
+
+Focus Future Campaigns on Birmingham & Manchester:
+These cities consistently show higher engagement and conversion rates. Consider location-based ad customization.
+
+Optimize for Desktop Over Mobile:
+While mobile volume is higher, conversion and engagement rates favor desktop. Enhance desktop creatives and experience.
+
+Leverage Discount-Focused Ads:
+Discount ads have a clear advantage in driving conversions. Replicate their style and structure in new campaigns.
+
+Consider Seasonality in Budget Allocation:
+Increase spend during summer and Q4 months (Sept–Nov) to capitalize on peak conversion periods.
+
+Evaluate Facebook Strategy:
+Facebook yields the lowest ROI across all segments. Either refine targeting and creative or reduce spend on this channel.
+
+Run A/B Tests on Ad Format & Copy:
+Further investigate why discount ads perform better and test similar variations across underperforming creatives.
+
+📦 Deliverables Recap
+✅ SQL Queries: Used for aggregation, ROI calculation, and metric breakdowns across campaign/channel/device dimensions.
+
+📊 Dashboards/Visualizations: Highlighted KPIs, ROI tables, city/device performance, and seasonal trends.
+
+📄 Report (This Document): Synthesizes findings and actionable strategies to guide future campaign decisions.
+
+🎯 Presentation (Pending): Suggested next step—summarize these insights into slides for stakeholder briefing.
