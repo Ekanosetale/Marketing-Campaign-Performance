@@ -79,7 +79,7 @@ The dataset contains the following columns:
 7.	Time Series Analysis:
 ●	Are there any noticeable trends or seasonal effects in ad performance over time?
 
-## Analysis And Discussion Of Finfings
+## Analysis And Discussion Of Findings
 
 ![](1.jpg)
 ![](2.jpg)
@@ -105,33 +105,22 @@ Best ROI consistently observed on Pinterest Desktop, especially for the Spring c
 ### 7. Time Series & Seasonal Trends
 **Best Performing Months:** September to November showed the highest revenues and conversions. June, July, August saw peak conversion rates (34.36% in June), likely due to seasonal promotional pushes. Engagement rates peaked in June (9.55%) and July (9.10%)—showing strong summer interest.
 
-## 💡 Recommendations
-Double Down on Pinterest Ads—Especially Desktop:
+## Recommendations
+1. Double Down on Pinterest Ads—Especially Desktop:
 ROI is significantly higher on Pinterest, particularly on desktop. Reallocate more spend here to maximize returns.
 
-Focus Future Campaigns on Birmingham & Manchester:
+2. Focus Future Campaigns on Birmingham & Manchester:
 These cities consistently show higher engagement and conversion rates. Consider location-based ad customization.
 
-Optimize for Desktop Over Mobile:
+3. Optimize for Desktop Over Mobile:
 While mobile volume is higher, conversion and engagement rates favor desktop. Enhance desktop creatives and experience.
 
-Leverage Discount-Focused Ads:
+4. Leverage Discount-Focused Ads:
 Discount ads have a clear advantage in driving conversions. Replicate their style and structure in new campaigns.
 
-Consider Seasonality in Budget Allocation:
+5. Consider Seasonality in Budget Allocation:
 Increase spend during summer and Q4 months (Sept–Nov) to capitalize on peak conversion periods.
 
-Evaluate Facebook Strategy:
+6. Evaluate Facebook Strategy:
 Facebook yields the lowest ROI across all segments. Either refine targeting and creative or reduce spend on this channel.
 
-Run A/B Tests on Ad Format & Copy:
-Further investigate why discount ads perform better and test similar variations across underperforming creatives.
-
-📦 Deliverables Recap
-✅ SQL Queries: Used for aggregation, ROI calculation, and metric breakdowns across campaign/channel/device dimensions.
-
-📊 Dashboards/Visualizations: Highlighted KPIs, ROI tables, city/device performance, and seasonal trends.
-
-📄 Report (This Document): Synthesizes findings and actionable strategies to guide future campaign decisions.
-
-🎯 Presentation (Pending): Suggested next step—summarize these insights into slides for stakeholder briefing.
