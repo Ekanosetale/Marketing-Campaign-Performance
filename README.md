@@ -124,3 +124,10 @@ Increase spend during summer and Q4 months (Sept–Nov) to capitalize on peak co
 6. Evaluate Facebook Strategy:
 Facebook yields the lowest ROI across all segments. Either refine targeting and creative or reduce spend on this channel.
 
+# Conclusion
+This marketing campaign performance analysis has provided a comprehensive view of how our campaigns are performing across channels, devices, geographies, and time. Key insights revealed that Pinterest consistently delivers the highest ROI particularly on desktop—while Facebook lags in cost-efficiency. Discount-focused ads outperform others in both engagement and conversions, and desktop devices continue to show better performance metrics than mobile.
+
+Cities like Birmingham and Manchester stand out as high-converting and highly engaged audiences, and seasonal trends highlight summer and Q4 months as critical periods for increased ad investment.
+
+Moving forward, optimizing ad spend by prioritizing high-performing channels, devices, and ad formats, while tailoring strategies based on geographic and seasonal trends, will significantly enhance campaign outcomes. With these data-driven recommendations, the company is well-positioned to maximize ROI, improve engagement, and refine targeting for future marketing initiatives.
+
